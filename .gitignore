@@ -1,0 +1,8 @@
+# built output
+dist
+
+# deps
+node_modules
+
+# private files
+.env
