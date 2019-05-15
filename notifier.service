@@ -1,0 +1,15 @@
+[Unit]
+Description=Social Notifier
+After=network.target
+
+[Service]
+ExecStart=/var/local/social-notifier/bin/start.sh
+Restart=always
+User=nobody
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/var/local/social-notifier
+
+[Install]
+WantedBy=multi-user.target
