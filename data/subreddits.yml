@@ -1,0 +1,23 @@
+amazonecho:
+  - recipe
+  - cooking
+googleassistant:
+  - recipe
+  - cooking
+googlehome:
+  - recipe
+  - cooking
+recipes:
+  - voice assistant
+  - smart speaker
+  - alexa
+  - echo
+  - google home
+  - google assistant
+cooking:
+  - voice assistant
+  - smart speaker
+  - alexa
+  - echo
+  - google home
+  - google assistant
