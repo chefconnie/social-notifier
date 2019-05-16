@@ -18,10 +18,11 @@ export function getResults(subredditsWithSearchTerms, callback) {
     });
 
     stream.on('item', (submission) => {
-      let { title, selfText } = submission;
+      let { title, selfText, selftext } = submission;
       let matchesQuery = tokens.some((token) => {
-        return (title && title.includes(token)) ||
-          (selfText && selfText.includes(token));
+        return matchesToken(title, token) ||
+          matchesToken(selfText, token) ||
+          matchesToken(selftext, token);
       });
 
       if (matchesQuery) {
@@ -39,4 +40,10 @@ function getClient() {
     username: process.env.REDDIT_USERNAME,
     password: process.env.REDDIT_PASSWORD
   });
+}
+
+function matchesToken(text, token) {
+  let tokens = token.split(',');
+
+  return text && tokens.every((token) => text.includes(token));
 }
