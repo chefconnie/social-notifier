@@ -5,7 +5,8 @@ let client;
 
 export function getResults(subredditsWithSearchTerms, callback) {
   let numSubreddits = Object.keys(subredditsWithSearchTerms).length;
-  let pollTime = process.env.REDDIT_MAX_REQS_PER_MINUTE / numSubreddits * 1000;
+  let maxRequestsPerSecond = process.env.REDDIT_MAX_REQS_PER_MINUTE / 60;
+  let pollTime = maxRequestsPerSecond * numSubreddits * 1000;
 
   client = getClient();
 
