@@ -43,7 +43,7 @@ function getBlocks(type, payload) {
   }
 }
 
-function getRedditBlocks({ author, selftext, title, url }) {
+function getRedditBlocks({ author, selftext, title, permalink }) {
   let titleBlockText = [':reddit: New post'];
   let bodyBlockText = [`*Title:* ${title}`];
 
@@ -79,7 +79,7 @@ function getRedditBlocks({ author, selftext, title, url }) {
           "text": "Visit Post",
           "emoji": true
         },
-        "url": url
+        "url": `https://www.reddit.com${permalink}`
       }
     ]
   }]
