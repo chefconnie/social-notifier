@@ -77,7 +77,7 @@ Then, we recommend following the [CertSimple Linux deployment guide](https://cer
 * `ssh user@sub.host.com`
 * `cd /var/local/social-notifier`
 * `git pull`
-* `yarn run build`
+* `yarn && yarn run build`
 * `sudo systemctl restart notifier`
 
 Since `.env` is gitignored, you will need to set production environment variables manually, e.g. by
