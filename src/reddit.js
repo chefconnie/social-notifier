@@ -1,6 +1,8 @@
 import snoowrap from 'snoowrap';
 import { SubmissionStream } from 'snoostorm';
 
+import { asToken } from './util/regexp';
+
 let client;
 
 export function getResults(config, callback) {
@@ -43,7 +45,7 @@ function getClient() {
 function makeTestsForTokens(tokens) {
   return tokens.map((token) => {
     let regExps = token.split(',')
-      .map((_token) => new RegExp(`^(.*\\s+)*${_token}(\\s+.*)*$`, 'i'));
+      .map((_token) => asToken(_token));
 
     return (text) => regExps.every((regExp) => regExp.test(text));
   });
