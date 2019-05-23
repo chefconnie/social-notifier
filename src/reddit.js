@@ -3,15 +3,15 @@ import { SubmissionStream } from 'snoostorm';
 
 let client;
 
-export function getResults(subredditsWithSearchTerms, callback) {
-  let numSubreddits = Object.keys(subredditsWithSearchTerms).length;
+export function getResults(config, callback) {
+  let numSubreddits = Object.keys(config).length;
   let maxRequestsPerSecond = process.env.REDDIT_MAX_REQS_PER_MINUTE / 60;
   let pollTime = maxRequestsPerSecond * numSubreddits * 1000;
 
   client = getClient();
 
-  for (let subreddit in subredditsWithSearchTerms) {
-    let tests = makeTestsForTokens(subredditsWithSearchTerms[subreddit]);
+  for (let subreddit in config) {
+    let tests = makeTestsForTokens(config[subreddit]);
     let stream = new SubmissionStream(client, {
       subreddit,
       pollTime,
