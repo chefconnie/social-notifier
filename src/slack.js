@@ -47,46 +47,22 @@ function getBlocks(type, payload) {
   }
 }
 
-function getRedditBlocks({ author, selftext, title, permalink }) {
-  let titleBlockText = [':reddit: New post'];
-  let bodyBlockText = [`*Title:* ${title}`];
+function getRedditBlocks({ author, selftext, title: postTitle, permalink }) {
+  let title = ':reddit: New post';
+  let body = `*Title:* ${postTitle}`;
+  let url = `https://www.reddit.com${permalink}`;
 
   if (author) {
     let name = author.name || author;
 
-    titleBlockText.push(`from <https://www.reddit.com/u/${name}|u/${name}>`);
+    title = `${title} from <https://www.reddit.com/u/${name}|u/${name}>`;
   }
 
   if (selftext) {
-    bodyBlockText.push(`*Content:* ${selftext}`);
+    body = `${body}\n*Content:* ${selftext}`;
   }
 
-  return [{
-    "type": "section",
-    "text": {
-      "type": "mrkdwn",
-      "text": titleBlockText.join(' ')
-    }
-  }, {
-    "type": "section",
-    "text": {
-      "type": "mrkdwn",
-      "text": bodyBlockText.join('\n')
-    }
-  }, {
-    "type": "actions",
-    "elements": [
-      {
-        "type": "button",
-        "text": {
-          "type": "plain_text",
-          "text": "Visit Post",
-          "emoji": true
-        },
-        "url": `https://www.reddit.com${permalink}`
-      }
-    ]
-  }]
+  return makeNotificationBlocks({ title, body, url });
 }
 
 function getTwitterBlocks({ }) {
@@ -108,6 +84,49 @@ function getErrorBlocks({ message, stack }) {
         "type": "mrkdwn",
         "text": stack
       }
+    });
+  }
+
+  return blocks;
+}
+
+function makeNotificationBlocks({ title, body, url }) {
+  let blocks = [];
+
+  if (title) {
+    blocks.push({
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": title
+      }
+    })
+  }
+
+  if (body) {
+    blocks.push({
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": body
+      }
+    });
+  }
+
+  if (url) {
+    blocks.push({
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Visit Post",
+            "emoji": true
+          },
+          "url": url
+        }
+      ]
     });
   }
 
