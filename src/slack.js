@@ -65,7 +65,13 @@ function getRedditBlocks({ author, selftext, title: postTitle, permalink }) {
   return makeNotificationBlocks({ title, body, url });
 }
 
-function getTwitterBlocks({ }) {
+function getTwitterBlocks({ extended_tweet, id_str, text, truncated, user }) {
+  let { name, screen_name } = user;
+  let title = `:twitter: New tweet from <https://www.twitter.com/${screen_name}>|@${screen_name}> (${name})`;
+  let body = truncated ? extended_tweet.full_text : text;
+  let url = `https://www.twitter.com/${screen_name}/status/${id_str}`;
+
+  return makeNotificationBlocks({ title, body, url });
 }
 
 function getErrorBlocks({ message, stack }) {
