@@ -74,13 +74,6 @@ function makeTestsForConfig(config) {
           asToken(QUESTION_WORDS.join('|')).test(text);
       }
 
-      for (let regExp of regExps) {
-        if (regExp.test(text)) {
-          console.log(regExp);
-          console.log(text);
-        }
-      }
-
       return is_question === isQuestion &&
         regExps.every((regExp) => regExp.test(text));
     };
