@@ -1,13 +1,16 @@
 amazonecho:
   - recipe
+  - recipes
   - cooking
   - kitchen
 googleassistant:
   - recipe
+  - recipes
   - cooking
   - kitchen
 googlehome:
   - recipe
+  - recipes
   - cooking
   - kitchen
 food:
@@ -17,6 +20,8 @@ food:
   - echo
   - google home
   - google assistant
+  - plan,tool
+  - plan,tools
 recipes:
   - voice assistant
   - smart speaker
@@ -24,6 +29,8 @@ recipes:
   - echo
   - google home
   - google assistant
+  - plan,tool
+  - plan,tools
 cooking:
   - voice assistant
   - smart speaker
@@ -31,6 +38,8 @@ cooking:
   - echo
   - google home
   - google assistant
+  - plan,tool
+  - plan,tools
 cookingforbeginners:
   - voice assistant
   - smart speaker
@@ -38,6 +47,8 @@ cookingforbeginners:
   - echo
   - google home
   - google assistant
+  - plan,tool
+  - plan,tools
 askreddit:
   - voice assistant,recipe
   - voice assistant,cooking
@@ -57,3 +68,7 @@ askreddit:
   - google assistant,recipe
   - google assistant,cooking
   - google assistant,kitchen
+  - meal planning,tool
+  - meal planning,tools
+  - meal plan,tool
+  - meal plan,tools
