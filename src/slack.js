@@ -35,6 +35,10 @@ function getBlocks(type, payload) {
     type === undefined;
   }
 
+  if (payload instanceof Error) {
+    type === SOURCES.Error;
+  }
+
   switch(type) {
     case SOURCES.Reddit: return getRedditBlocks(payload);
     case SOURCES.Twitter: return getTwitterBlocks(payload);
