@@ -13,6 +13,10 @@ In addition, new projects will also need to set up:
     * You may use the simpler "script" app type, unless you have additional reasons not to
     * Recommend you follow the "first steps" from [Reddit's quickstart](https://github.com/reddit-archive/reddit/wiki/OAuth2-Quick-Start-Example#first-steps)
     * For more, see Reddit's [API wiki](https://github.com/reddit-archive/reddit/wiki/API)
+* A [Twitter API client](https://developer.twitter.com/en/apps)
+    * You **must** use "user auth" for firehose access (i.e. you cannot use "application-only" auth)
+    * To quickly generate a user access token + secret follow [these instructions](https://developer.twitter.com/en/docs/basics/authentication/guides/access-tokens)
+    * For more, see Twitter's [Developer docs](https://developer.twitter.com/en/docs)
 * A [Slack app](https://api.slack.com/apps)
     * You will need to configure the "Post to specific channels" (`incoming-webgook`) scope
     * You may also need to configure the "Send messages as..." (`chat:write:bot`) scope
@@ -41,7 +45,17 @@ Configuration for all social services is set up in `.yml` files in the data dire
     ```
 
 ### Twitter
-Coming soon
+* Config file: `data/twitter.yml`
+* Structure:
+    ```
+    - is_query: true
+      terms: comma,separated,means,boolean,or
+    - terms:
+      - space separated,means boolean and
+      - use multiple bullets,to combine boolean or
+    ```
+
+In the above example, each top-level YAML entry is considered a "query object". If you are filtering for only one query object, you may omit bullets for the top-level object ONLY.
 
 ## Running / Development
 ### Developing
@@ -80,6 +94,8 @@ sudo journalctl --follow -u notifier
 ## Planned Improvements
 PRs generally welcome, especially for:
 
-* Twitter support
+* Support for URLs as search terms, especially for Twitter
+    * URLs in tweet text are replaced with shortened `t.co` links
+    * Suggest adding a `url` or `urls` attribute to YAML; filtering on `${origin}${path}` concatenation; and matching `${origin}${path}` on URL entities' [`expanded_url`](https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#urls)
 * Caching last-received results on the server's YAML file
-    * (currently some notifications may be duplicated on restart)
+    * (currently some Reddit notifications may be duplicated on restart)
