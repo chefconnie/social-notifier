@@ -19,6 +19,8 @@ export async function getTweets(config, callback) {
     let isOriginalTweet = id_str && !retweeted_status;
     let body = truncated ? extended_tweet.full_text : text;
 
+    console.log(`[TWITTER] - testing https://twitter.com/i/web/status/${id_str}`);
+
     if (isOriginalTweet && tests.some((test) => test(body))) {
       callback(json);
     }

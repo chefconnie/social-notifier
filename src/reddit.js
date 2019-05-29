@@ -21,9 +21,11 @@ export function getResults(config, callback) {
     });
 
     stream.on('item', (submission) => {
-      let { title, selfText, selftext } = submission;
+      let { title, selfText, selftext, permalink } = submission;
       let matchesQuery = [title, selfText, selftext]
         .some((text) => tests.some((test) => test(text)));
+
+      console.log(`[REDDIT:${subreddit.toUpperCase()}] - testing https://www.reddit.com${permalink}`);
 
       if (matchesQuery) {
         callback(submission);
@@ -49,4 +51,8 @@ function makeTestsForTokens(tokens) {
 
     return (text) => regExps.every((regExp) => regExp.test(text));
   });
+}
+
+function log(subreddit, text) {
+  console.log(`[REDDIT:${subreddit.toUpperCase()}] - ${text}`);
 }
