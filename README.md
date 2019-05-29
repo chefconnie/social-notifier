@@ -94,7 +94,6 @@ sudo journalctl --follow -u notifier
 ## Planned Improvements
 The following items are listed in priority order. PRs very welcome!
 
-* Rewriting this logic in Elixir
 * Support for URLs as search terms, especially for Twitter
     * URLs in tweet text are replaced with shortened `t.co` links
     * Suggest adding a `url` or `urls` attribute to YAML; filtering on `${origin}${path}` concatenation; and matching `${origin}${path}` on URL entities' [`expanded_url`](https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#urls)
