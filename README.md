@@ -99,3 +99,6 @@ The following items are listed in priority order. PRs very welcome!
     * Suggest adding a `url` or `urls` attribute to YAML; filtering on `${origin}${path}` concatenation; and matching `${origin}${path}` on URL entities' [`expanded_url`](https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object#urls)
 * Caching last-received results on the server's YAML file
     * (currently some Reddit notifications may be duplicated on restart)
+
+## Licensing
+This project is licensed under the GPLv3 license. If you would like to use this software under different terms (e.g. as part of a proprietary software product you intend to commercialize) please reach out to a maintainer to request [an exception](https://www.gnu.org/philosophy/selling-exceptions.en.html).
