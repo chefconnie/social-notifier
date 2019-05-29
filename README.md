@@ -48,7 +48,7 @@ Configuration for all social services is set up in `.yml` files in the data dire
 * Config file: `data/twitter.yml`
 * Structure:
     ```
-    - is_query: true
+    - is_question: true
       terms: comma,separated,means,boolean,or
     - terms:
       - space separated,means boolean and
