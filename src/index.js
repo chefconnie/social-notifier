@@ -34,5 +34,4 @@ async function initTwitter(configPath = join(cwd(), 'data', 'twitter.yml')) {
 }
 
 initReddit();
-// todo consider how to do this WITHOUT using 100% CPU lol
-// initTwitter();
+initTwitter();
