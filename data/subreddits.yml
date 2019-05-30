@@ -13,6 +13,45 @@ googlehome:
   - recipes
   - cooking
   - kitchen
+chefit:
+  - app
+  - technology
+  - software
+  - recipe development
+  - save money
+  - save time
+  - cloud kitchen
+  - labor
+  - labour
+  - wastage
+  - efficiency
+  - efficient
+kitchenconfidential:
+  - app
+  - technology
+  - software
+  - recipe development
+  - save money
+  - save time
+  - cloud kitchen
+  - labor
+  - labour
+  - wastage
+  - efficiency
+  - efficient
+restaurateur:
+  - app
+  - technology
+  - software
+  - recipe development
+  - save money
+  - save time
+  - cloud kitchen
+  - labor
+  - labour
+  - wastage
+  - efficiency
+  - efficient
 food:
   - voice assistant
   - smart speaker
