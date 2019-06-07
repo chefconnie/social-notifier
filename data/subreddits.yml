@@ -62,6 +62,7 @@ food:
   - plan,tool
   - plan,tools
 recipes:
+  - app
   - voice assistant
   - smart speaker
   - alexa
@@ -71,6 +72,7 @@ recipes:
   - plan,tool
   - plan,tools
 cooking:
+  - app
   - voice assistant
   - smart speaker
   - alexa
@@ -80,6 +82,97 @@ cooking:
   - plan,tool
   - plan,tools
 cookingforbeginners:
+  - app
+  - voice assistant
+  - smart speaker
+  - alexa
+  - echo
+  - google home
+  - google assistant
+  - plan,tool
+  - plan,tools
+mealprepsunday:
+  - app
+  - voice assistant
+  - smart speaker
+  - alexa
+  - echo
+  - google home
+  - google assistant
+  - plan,tool
+  - plan,tools
+foodhacks:
+  - app
+  - voice assistant
+  - smart speaker
+  - alexa
+  - echo
+  - google home
+  - google assistant
+  - plan,tool
+  - plan,tools
+drunkencookery:
+  - app
+  - voice assistant
+  - smart speaker
+  - alexa
+  - echo
+  - google home
+  - google assistant
+  - plan,tool
+  - plan,tools
+grilling:
+  - app
+  - voice assistant
+  - smart speaker
+  - alexa
+  - echo
+  - google home
+  - google assistant
+  - plan,tool
+  - plan,tools
+slowcooking:
+  - app
+  - voice assistant
+  - smart speaker
+  - alexa
+  - echo
+  - google home
+  - google assistant
+  - plan,tool
+  - plan,tools
+pizza:
+  - app
+  - voice assistant
+  - smart speaker
+  - alexa
+  - echo
+  - google home
+  - google assistant
+  - plan,tool
+  - plan,tools
+baking:
+  - app
+  - voice assistant
+  - smart speaker
+  - alexa
+  - echo
+  - google home
+  - google assistant
+  - plan,tool
+  - plan,tools
+bbq:
+  - app
+  - voice assistant
+  - smart speaker
+  - alexa
+  - echo
+  - google home
+  - google assistant
+  - plan,tool
+  - plan,tools
+castiron:
+  - app
   - voice assistant
   - smart speaker
   - alexa
