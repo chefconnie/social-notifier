@@ -17,7 +17,7 @@
     "js-yaml": "^3.13.1",
     "node-fetch": "^2.6.0",
     "snoostorm": "^1.0.2",
-    "snoowrap": "^1.15.2",
+    "snoowrap": "^1.17.0",
     "twit": "^2.2.11"
   },
   "keywords": [
