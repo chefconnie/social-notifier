@@ -2,17 +2,14 @@ amazonecho:
   - recipe
   - recipes
   - cooking
-  - kitchen
 googleassistant:
   - recipe
   - recipes
   - cooking
-  - kitchen
 googlehome:
   - recipe
   - recipes
   - cooking
-  - kitchen
 chefit:
   - app
   - technology
@@ -26,6 +23,13 @@ chefit:
   - wastage
   - efficiency
   - efficient
+  - prep list
+  - inventory
+  - ghost kitchen
+  - annoying
+  - annoyed
+  - training
+  - recipes
 kitchenconfidential:
   - app
   - technology
@@ -39,6 +43,13 @@ kitchenconfidential:
   - wastage
   - efficiency
   - efficient
+  - prep list
+  - inventory
+  - ghost kitchen
+  - annoying
+  - annoyed
+  - training
+  - recipes
 restaurateur:
   - app
   - technology
@@ -52,6 +63,13 @@ restaurateur:
   - wastage
   - efficiency
   - efficient
+  - prep list
+  - inventory
+  - ghost kitchen
+  - annoying
+  - annoyed
+  - training
+  - recipes
 food:
   - voice assistant
   - smart speaker
@@ -59,8 +77,6 @@ food:
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 recipes:
   - app
   - voice assistant
@@ -69,8 +85,6 @@ recipes:
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 cooking:
   - app
   - voice assistant
@@ -79,8 +93,6 @@ cooking:
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 cookingforbeginners:
   - app
   - voice assistant
@@ -89,18 +101,13 @@ cookingforbeginners:
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 mealprepsunday:
-  - app
   - voice assistant
   - smart speaker
   - alexa
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 foodhacks:
   - app
   - voice assistant
@@ -109,8 +116,6 @@ foodhacks:
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 drunkencookery:
   - app
   - voice assistant
@@ -119,8 +124,6 @@ drunkencookery:
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 grilling:
   - app
   - voice assistant
@@ -129,8 +132,6 @@ grilling:
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 slowcooking:
   - app
   - voice assistant
@@ -139,8 +140,6 @@ slowcooking:
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 pizza:
   - app
   - voice assistant
@@ -149,8 +148,6 @@ pizza:
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 baking:
   - app
   - voice assistant
@@ -159,8 +156,6 @@ baking:
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 bbq:
   - app
   - voice assistant
@@ -169,8 +164,6 @@ bbq:
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 castiron:
   - app
   - voice assistant
@@ -179,8 +172,6 @@ castiron:
   - echo
   - google home
   - google assistant
-  - plan,tool
-  - plan,tools
 askreddit:
   - voice assistant,recipe
   - voice assistant,cooking
@@ -200,7 +191,3 @@ askreddit:
   - google assistant,recipe
   - google assistant,cooking
   - google assistant,kitchen
-  - meal planning,tool
-  - meal planning,tools
-  - meal plan,tool
-  - meal plan,tools

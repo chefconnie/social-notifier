@@ -1,8 +1,7 @@
-- is_question: true
-  terms:
-    - alexa,google home,google assistant,echo
-    - recipe,recipes,cooking,kitchen
-- is_question: true
-  terms:
-    - meal plan,meal planning,meal plans
-    - tool,tools
+- terms:
+    - restaurant,restaurants,cafeteria,cafeterias,catering,caterer,caterers
+    - management software,management system,mgmt software,mgmt system
+- terms:
+    - restaurant,restaurants,cafeteria,cafeterias,catering,caterer,caterers
+    - BOH,back of house,back-of-house
+    - software,system,systems,app,apps
