@@ -16,8 +16,8 @@
     "dotenv": "^8.0.0",
     "js-yaml": "^3.13.1",
     "node-fetch": "^2.6.0",
-    "snoostorm": "^1.0.2",
-    "snoowrap": "^1.17.0",
+    "snoostorm": "MayorMonty/snoostorm",
+    "snoowrap": "^1.19.0",
     "twit": "^2.2.11"
   },
   "keywords": [
@@ -27,10 +27,10 @@
     "slack"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.4",
-    "@babel/plugin-transform-runtime": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
-    "@babel/runtime": "^7.4.4"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/runtime": "^7.5.5"
   }
 }
