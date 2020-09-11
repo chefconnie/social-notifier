@@ -15,7 +15,7 @@
     "@slack/web-api": "^5.0.1",
     "dotenv": "^8.0.0",
     "js-yaml": "^3.13.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "snoostorm": "MayorMonty/snoostorm",
     "snoowrap": "^1.19.0",
     "twit": "^2.2.11"
